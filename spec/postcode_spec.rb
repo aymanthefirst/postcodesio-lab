@@ -19,12 +19,10 @@ describe Postcodesio do
 
     it "should return a postcode between 5-8 in length"  do
       expect(@response['result']['postcode'].size).to be_between(5, 8)
-      # puts "you are here: #{@response['result']['postcode'].size}"
     end
 
     it "should return an quality key integer between 1-9" do
         expect(@response['result']['quality']).to be_between(1, 9)
-      # puts "you are here: #{@response['result']['quality']}"
     end
 
     it "should return an ordnance survey eastings value as integer" do
